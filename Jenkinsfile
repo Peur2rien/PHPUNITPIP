@@ -24,15 +24,21 @@ pipeline {
       }
     }
 
-    stage('Pre-Prod') {
+    stage('SonarScanner') {
       steps {
         echo 'Pre-Prod'
       }
     }
 
-    stage('Production (Deploiment)') {
+    stage('Pre-Prod') {
       steps {
         echo 'Production'
+      }
+    }
+
+    stage('Production') {
+      steps {
+        echo 'PROD'
       }
     }
 
